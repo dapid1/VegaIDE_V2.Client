@@ -1,0 +1,13 @@
+﻿@page "/IDEComponent"
+
+@using VegaIDE_V2.Shared;
+<h3>IDEComponent</h3>
+<select @onchange="OnValueChanged" title="Choose you weapon: ">
+    <option value="@(Language.CSharp)">C#</option>
+    <option value="@(Language.Python)" selected>Python</option>
+    <option value="@(Language.Java)">JavaScript</option>
+</select>
+<p>output: @language</p>
+
+<textarea @bind="@sourceCode"/>
+<p>Source Code: @sourceCode</p>
